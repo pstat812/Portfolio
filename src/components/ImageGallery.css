@@ -1,0 +1,49 @@
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin: 0 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #3b82f6, #6366f1);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transform: scaleY(1.2);
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:active {
+  background: linear-gradient(90deg, #1d4ed8, #3730a3);
+  transform: scaleY(1.1);
+}
+
+.custom-scrollbar::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+/* Firefox support */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 transparent;
+}
+
+/* Enhanced hover effect */
+.custom-scrollbar:hover::-webkit-scrollbar-thumb {
+  background: linear-gradient(90deg, #2563eb, #4f46e5);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.5);
+}
+
+/* Smooth scroll behavior */
+.custom-scrollbar {
+  scroll-behavior: smooth;
+} 
