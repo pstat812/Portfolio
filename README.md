@@ -4,7 +4,7 @@
 - https://pstat812.github.io/Portfolio/
 
 ## Introduction
-Welcome to my interactive developer portfolio! This modern, responsive web application showcases my journey as a full-stack developer, featuring **4 major projects** spanning AI-powered applications, machine learning tools, game development, and mobile applications. Built with cutting-edge React technologies and enhanced with 3D animations, this portfolio demonstrates my expertise in creating innovative software solutions using the latest web technologies and frameworks.
+Welcome to my portfolio! This webpage showcases my journey as a full-stack developer and demonstrates my expertise in creating software solutions using the latest web technologies and frameworks.
 
 ## Portfolio Features and Functionality
 
