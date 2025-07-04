@@ -233,10 +233,10 @@ export const experiences = [
   },
   {
     title: "Looking for a job",
-    job: "😢",
+    job: "🫡 ",
     date: "Present",
     contents: [
-      "I am currently looking for a job as a software engineer. I am open to all opportunities and willing to relocate to anywhere.",
+      "I am currently looking for a job as a software developer. However,I am open to all opportunities and willing to relocate to anywhere.",
       "I am a quick learner, always able to learn new things to immediately apply them to my work.",
     
     ],
