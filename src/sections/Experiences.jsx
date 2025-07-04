@@ -1,9 +1,10 @@
-import { Timeline } from "../components/timeline";
+import ExperienceList from "../components/ExperienceCard";
 import { experiences } from "../constants";
+
 const Experiences = () => {
   return (
-    <section id="experiences" className="w-full c-space section-spacing">
-      <Timeline data={experiences} />
+    <section id="experiences" className="w-full">
+      <ExperienceList data={experiences} />
     </section>
   );
 };

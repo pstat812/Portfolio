@@ -62,14 +62,14 @@ const Education = () => {
           category: "",
           icon: School,
           relatedIds: [],
-          status: "in-progress",
-          energy: 99,
+          status: "completed",
+          energy: 100,
         },
       ];
   return (
-    <section className='relative c-space section-spacing'>
+    <section className='relative c-space min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] xl:min-h-screen mt-20 md:mt-30'>
       <Particles
-        className="absolute inset-0 -z-1000"
+        className="absolute inset-0 -z-10 h-full w-full"
         quantity={200}
         staticity={180}
         ease={20}

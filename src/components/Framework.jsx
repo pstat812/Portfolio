@@ -40,24 +40,53 @@ export function Framework() {
 
   return (
     <div className="relative flex h-[15rem] w-full flex-col items-center justify-center">
-      <OrbitingCircles iconSize={40} speed={0.75}>
-        {skills.map((skill, index) => (
-          <Icon 
-            key={index} 
-            src={skill.url}
-            alt={skill.name}
-          />
-        ))}
-      </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={0.75}>
-        {skills.slice().reverse().map((skill, index) => (
-          <Icon 
-            key={index} 
-            src={skill.url}
-            alt={skill.name}
-          />
-        ))}
-      </OrbitingCircles>
+      {/* Outer ring - larger radius and icons */}
+      <div className="hidden md:block">
+        <OrbitingCircles iconSize={40} radius={160} speed={0.75}>
+          {skills.map((skill, index) => (
+            <Icon 
+              key={index} 
+              src={skill.url}
+              alt={skill.name}
+            />
+          ))}
+        </OrbitingCircles>
+      </div>
+      <div className="block md:hidden">
+        <OrbitingCircles iconSize={25} radius={100} speed={0.75}>
+          {skills.map((skill, index) => (
+            <Icon 
+              key={index} 
+              src={skill.url}
+              alt={skill.name}
+            />
+          ))}
+        </OrbitingCircles>
+      </div>
+      
+      {/* Inner ring - smaller radius and icons */}
+      <div className="hidden md:block">
+        <OrbitingCircles iconSize={25} radius={100} reverse speed={0.75}>
+          {skills.slice().reverse().map((skill, index) => (
+            <Icon 
+              key={index} 
+              src={skill.url}
+              alt={skill.name}
+            />
+          ))}
+        </OrbitingCircles>
+      </div>
+      <div className="block md:hidden">
+        <OrbitingCircles iconSize={18} radius={60} reverse speed={0.75}>
+          {skills.slice().reverse().map((skill, index) => (
+            <Icon 
+              key={index} 
+              src={skill.url}
+              alt={skill.name}
+            />
+          ))}
+        </OrbitingCircles>
+      </div>
     </div>
   );
 }

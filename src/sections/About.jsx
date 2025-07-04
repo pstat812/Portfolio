@@ -14,10 +14,14 @@ const About = () => {
   const isInView = useInView(sectionRef, { once: true });
 
   const getRandomStyle = () => {
+    // Check if it's mobile screen (approximate)
+    const isMobile = window.innerWidth < 640; // sm breakpoint in Tailwind
+    const isTablet = window.innerWidth < 1024; // lg breakpoint in Tailwind
+    
     return {
       rotate: `${Math.random() * 20 - 10}deg`, // Random rotation between -10 and 10 degrees
-      top: `${Math.random() * 75}%`, // Random top position between 0 and 75%
-      left: `${Math.random() * 55 + 10}%` // Random left position between 5 and 65%
+      top: `${Math.random() * (isMobile ? 60 : 75)}%`, // Smaller range for mobile
+      left: `${Math.random() * (isMobile ? 35 : isTablet ? 45 : 55) + (isMobile ? 15 : 10)}%` // Adjusted for different screen sizes
     }
   }
 
@@ -186,11 +190,11 @@ const About = () => {
 
             {/* grid 5 */}
             <div className='grid-default-color grid-5'>
-                <div className='z-10 w-[50%]'>
+                <div className='z-10 w-[50%] sm:w-[45%] md:w-[50%]'>
                     <p className='headtext'> Tech Stack</p>
                     <p className='subtext'>Here's my core technology stack that I've mastered through hands-on experience and continuous learning</p>
                 </div>
-                <div className='absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125'>
+                <div className='absolute inset-y-0 md:inset-y-9 w-full h-full start-[45%] sm:start-[50%] md:scale-125 scale-90 sm:scale-100'>
 
                     <Framework />
 

@@ -83,16 +83,25 @@ const FullScreenImageModal = ({
           onClick={(e) => e.stopPropagation()}
         >
           <AnimatePresence mode="wait">
-            <motion.img
+            <motion.div
               key={currentIndex}
-              src={images[currentIndex]}
-              alt={`${title} - Image ${currentIndex + 1}`}
-              className="w-full h-full object-contain rounded-lg shadow-2xl"
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-            />
+              className="w-full h-full overflow-hidden rounded-lg"
+              initial={{ opacity: 0, scale: 1.05 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ 
+                duration: 0.3, 
+                ease: [0.4, 0, 0.2, 1],
+                opacity: { duration: 0.2 },
+                scale: { duration: 0.3 }
+              }}
+            >
+              <img
+                src={images[currentIndex]}
+                alt={`${title} - Image ${currentIndex + 1}`}
+                className="w-full h-full object-contain shadow-2xl"
+              />
+            </motion.div>
           </AnimatePresence>
 
           {/* Image Info */}

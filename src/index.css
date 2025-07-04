@@ -121,7 +121,9 @@ html {
 }
 
 .grid-default-color {
-  @apply p-6 bg-gradient-to-b from-storm to-indigo rounded-2xl;
+  @apply p-6 rounded-2xl;
+  background: #282b4b; /* Solid fallback for mobile */
+  background: linear-gradient(to bottom, #282b4b, #1f1e39); /* Direct color values for better mobile support */
 }
 
 .grid-special-color {
@@ -129,6 +131,13 @@ html {
 }
 .grid-black-color {
   @apply p-6 bg-gradient-to-tl from-[#3A3A3A] via-[#242424] to-[#3A3A3A] rounded-2xl;
+}
+
+/* Separator line with mobile-friendly gradient */
+.separator-line {
+  @apply h-[1px] w-full;
+  background: rgb(115, 115, 115); /* Solid fallback */
+  background: linear-gradient(to right, rgba(115, 115, 115, 0), rgba(115, 115, 115, 1), rgba(115, 115, 115, 0));
 }
 
 /* Contact Section*/

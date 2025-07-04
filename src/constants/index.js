@@ -11,19 +11,22 @@ import engEduE9 from '/assets/projects/Eng_edu/E9.png'
 import engEduE10 from '/assets/projects/Eng_edu/E10.png'
 import engEduE11 from '/assets/projects/Eng_edu/E11.png'
 import engEduE12 from '/assets/projects/Eng_edu/E12.png'
+import FPS1 from '/assets/projects/FPS_Game/FPS1.png'
+import FPS2 from '/assets/projects/FPS_Game/FPS2.png'
+import FPS3 from '/assets/projects/FPS_Game/FPS3.png'
+import FPS4 from '/assets/projects/FPS_Game/FPS4.png'
+import FPS5 from '/assets/projects/FPS_Game/FPS5.png'
+import Tetris1 from '/assets/projects/Tetris/Tetris1.png'
+import Tetris2 from '/assets/projects/Tetris/Tetris2.png'
+import Tetris3 from '/assets/projects/Tetris/Tetris3.png'
+import Tetris4 from '/assets/projects/Tetris/Tetris4.png'
+import Tetris5 from '/assets/projects/Tetris/Tetris5.png'
+import LES1 from '/assets/projects/Lesion/LES1.png'
+import LES2 from '/assets/projects/Lesion/LES2.png'
+import LES3 from '/assets/projects/Lesion/LES3.png'
+import LES4 from '/assets/projects/Lesion/LES4.png'
+import LES5 from '/assets/projects/Lesion/LES5.png'
 
-// Technology logos
-import reactLogo from '/assets/logos/react.svg'
-import openaiLogo from '/assets/logos/openai3.svg'
-import azureLogo from '/assets/logos/azure.svg'
-import expoLogo from '/assets/logos/expo.svg'
-import nodejsLogo from '/assets/logos/react.svg' // Placeholder - add actual nodejs logo
-import mongodbLogo from '/assets/logos/react.svg' // Placeholder - add actual mongodb logo
-import tailwindcssLogo from '/assets/logos/tailwindcss.svg'
-import vueLogo from '/assets/logos/react.svg' // Placeholder - add actual vue logo
-import firebaseLogo from '/assets/logos/react.svg' // Placeholder - add actual firebase logo
-import javascriptLogo from '/assets/logos/javascript.svg'
-import css3Logo from '/assets/logos/css3.svg'
 
 // Social icons
 import whatsappIcon from '/assets/socials/whatsApp.svg'
@@ -31,24 +34,17 @@ import linkedinIcon from '/assets/socials/linkedIn.svg'
 import instagramIcon from '/assets/socials/instagram.svg'
 import githubIcon from '/assets/socials/github-white.svg'
 
-// Placeholder project image
-import accessoriesImg from '/assets/logos/react.svg' // Temporary placeholder
 
 export const myProjects = [
   {
     id: 1,
     title: "AI-Powered English Education Application",
     description:
-      "React web application designed to boost students' English proficiency through AI-powered learning tools and interactive features using advanced LLM technologies.",
+      "React native application designed to boost students' English proficiency through AI-powered learning tools and interactive features using advanced LLM technologies.",
     subDescription: [
-      "Built an AI-powered English learning platform with React Native and Expo, integrating multiple LLMs including GPT-4, DeepSeek for providing personalized education.",
-      "Developed comprehensive exercises (pronouns, tenses, prepositions, etc), reading comprehension, and interactive storytelling exercise features.",
-      "Created AI chatbot with contextual conversation practice, grammar correction with visual highlighting, and intelligent dialogue completion exercises for speaking practice.",
-      "Built handwriting recognition system using computer vision APIs to analyze and transcribe handwritten text with AI-powered content analysis and feedback.",
-      "Implemented bidirectional translation engine (English-Chinese) with voice input/output, synonyms/antonyms finder, and vocabulary expansion tools for comprehensive language learning.",
-      "Integrated advanced speech technologies with Microsoft Azure Speech Services for real-time pronunciation feedback, speech-to-text conversion, and natural text-to-speech capabilities.",
+      "The AI-Powered English Education Application is a comprehensive React Native application designed for English language learners. All features and functions are ALL integrated with LLM (Large Language Models) to provide intelligent, personalized learning experiences. The app leverages advanced AI technologies including OpenAI GPT-4, Microsoft Cognitive Services, and other LLM providers to deliver real-time language assistance, adaptive learning content, and interactive practice sessions tailored to each user's CEFR proficiency level.",
     ],
-    href: "",
+    href: "https://github.com/pstat812/AI-Powered-English-Education-Application",
     logo: "",
     images: [
       engEduE1,
@@ -68,103 +64,89 @@ export const myProjects = [
       {
         id: 1,
         name: "React Native",
-        path: reactLogo,
       },
       {
         id: 2,
         name: "OpenAI",
-        path: openaiLogo,
       },
       {
         id: 3,
         name: "Azure AI",
-        path: azureLogo,
       },
       {
         id: 4,
-        name: "TypeScript",
-        path: expoLogo,
+        name: "LLM",
       },
     ],
   },
   {
     id: 2,
-    title: "First Person Shooter Game",
+    title: "Skin Lesion Analysis Tool",
     description:
-      "A full-stack e-commerce platform with modern design and comprehensive features for online retail.",
+      "The Skin Lesion Analysis Tool is a React Native application powered by machine learning for automated mole classification and skin lesion analysis.",
     subDescription: [
-      "Developed a responsive e-commerce platform using React and Node.js for optimal performance.",
-      "Implemented secure payment processing with Stripe integration and user authentication.",
-      "Created an admin dashboard for inventory management and order tracking.",
-      "Optimized for mobile devices with progressive web app capabilities.",
+      "The app uses self-trained machine learning models to provide users with immediate feedback on potential skin concerns. It features binary classification and OpenAI GPT-4 for detailed evaluation of ABCD criteria, all wrapped in a modern, user-friendly interface with comprehensive history tracking."
+  
     ],
-    href: "",
+    href: "https://github.com/pstat812/Skin-Lesion-Analysis-Tool",
     logo: "",
     images: [
-      accessoriesImg,
-      accessoriesImg,
-      accessoriesImg
+      LES1,
+      LES2,
+      LES3,
+      LES4,
+      LES5,
     ],
     tags: [
       {
         id: 1,
-        name: "React",
-        path: reactLogo,
+        name: "React Native",
       },
       {
         id: 2,
-        name: "Node.js",
-        path: nodejsLogo,
+        name: "LLM",
       },
       {
         id: 3,
-        name: "MongoDB",
-        path: mongodbLogo,
+        name: "Machine Learning",
       },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: tailwindcssLogo,
-      },
+ 
     ],
   },
   {
     id: 3,
     title: "Tetris Game",
     description:
-      "A collaborative task management application with real-time updates and team collaboration features.",
+      "A Tetris game made under .NET and C#.",
     subDescription: [
-      "Built with Vue.js and Firebase for real-time synchronization across devices.",
-      "Implemented drag-and-drop functionality for intuitive task organization.",
-      "Added team collaboration features with role-based permissions.",
-      "Integrated push notifications and email reminders for task deadlines.",
+      "The Project is a Tetris game made with .NET WPF using C# as the main language. ",
+      "The game is a exact copy of the original Tetris game, with an local two player battle mode. It is made using OOP Design Patterns and Behavioral Patterns. ",
     ],
-    href: "",
+    href: "https://github.com/pstat812/2Player_Tetris",
     logo: "",
     images: [
-      accessoriesImg,
-      accessoriesImg
+      Tetris1,
+      Tetris2,
+      Tetris3,
+      Tetris4,
+      Tetris5,
     ],
     tags: [
       {
         id: 1,
-        name: "Vue.js",
-        path: vueLogo,
+        name: ".NET",
       },
       {
         id: 2,
-        name: "Firebase",
-        path: firebaseLogo,
+        name: "WPF",
       },
       {
         id: 3,
-        name: "JavaScript",
-        path: javascriptLogo,
+        name: "C#",
       },
       {
         id: 4,
-        name: "CSS3",
-        path: css3Logo,
+        name: "Object Oriented Programming",
       },
     ],
   },
@@ -172,40 +154,32 @@ export const myProjects = [
     id: 4,
     title: "First Person Shooter Game",
     description:
-      "A full-stack e-commerce platform with modern design and comprehensive features for online retail.",
+      "An FPS game made with Unity Engine and assets from Unity Asset Store.",
     subDescription: [
-      "Developed a responsive e-commerce platform using React and Node.js for optimal performance.",
-      "Implemented secure payment processing with Stripe integration and user authentication.",
-      "Created an admin dashboard for inventory management and order tracking.",
-      "Optimized for mobile devices with progressive web app capabilities.",
+      "The Project is an FPS game made with Unity Engine using C# script. ",
+      "In the game, you would become an agent and try to rescue a hostage who trapped in an enemy factory, you need to tackle the enemy who block your road and find the hostage.",
     ],
-    href: "",
+    href: "https://github.com/pstat812/FPS-Game-in-Unity",
     logo: "",
     images: [
-      accessoriesImg,
-      accessoriesImg,
-      accessoriesImg
+      FPS1,
+      FPS2,
+      FPS3,
+      FPS4,
+      FPS5,
     ],
     tags: [
       {
         id: 1,
-        name: "React",
-        path: reactLogo,
+        name: "Unity",
       },
       {
         id: 2,
-        name: "Node.js",
-        path: nodejsLogo,
+        name: "C#",
       },
       {
         id: 3,
-        name: "MongoDB",
-        path: mongodbLogo,
-      },
-      {
-        id: 4,
-        name: "TailwindCSS",
-        path: tailwindcssLogo,
+        name: "Game Development",
       },
     ],
   },
@@ -258,14 +232,13 @@ export const experiences = [
     ],
   },
   {
-    title: "Freelance Software Developer",
-    job: "Self-Employed",
+    title: "Looking for a job",
+    job: "😢",
     date: "Present",
     contents: [
-      "Currently working as a freelance software developer, providing custom software solutions to clients.",
-      "Specializing in web development, mobile applications, and software engineering projects.",
-      "Utilizing modern technologies including React, Vue.js, Python, and various frameworks to deliver high-quality solutions.",
-      "Building and maintaining client relationships while continuously expanding technical expertise.",
+      "I am currently looking for a job as a software engineer. I am open to all opportunities and willing to relocate to anywhere.",
+      "I am a quick learner, always able to learn new things to immediately apply them to my work.",
+    
     ],
   },
 ];

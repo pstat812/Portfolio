@@ -27,10 +27,8 @@ const Project = ({title, description, subDescription, href, images, tags, setPre
        </button>
      </div>
 
-     <div className='bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full'/>
-     {isHidden && (<ProjectDetails title={title} description={description} subDescription={subDescription} images={images} tags={tags} href={href} closeModal={() => setIsHidden(false)} />)}
-
-
+     <div className='separator-line'/>
+     {isHidden && (<ProjectDetails title={title} description={description} subDescription={subDescription} images={images} href={href} closeModal={() => setIsHidden(false)} />)}
 
     </section>
   )

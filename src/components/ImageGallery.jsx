@@ -31,24 +31,33 @@ const ImageGallery = ({ images, title }) => {
   return (
     <div className="relative">
       {/* Main Image Display */}
-      <div className="relative overflow-hidden rounded-t-2xl bg-neutral-900 h-64 sm:h-80">
+      <div className="relative overflow-hidden rounded-t-2xl bg-neutral-900 h-48 xs:h-56 sm:h-64 md:h-80">
         <AnimatePresence mode="wait">
-          <motion.img
+          <motion.div
             key={currentIndex}
-            src={images[currentIndex]}
-            alt={`${title} - Image ${currentIndex + 1}`}
-            className="w-full h-full object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -100 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-            onClick={openFullScreen}
-          />
+            className="w-full h-full overflow-hidden rounded-t-2xl"
+            initial={{ opacity: 0, scale: 1.1 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.95 }}
+            transition={{ 
+              duration: 0.3, 
+              ease: [0.4, 0, 0.2, 1],
+              opacity: { duration: 0.2 },
+              scale: { duration: 0.3 }
+            }}
+          >
+            <img
+              src={images[currentIndex]}
+              alt={`${title} - Image ${currentIndex + 1}`}
+              className="w-full h-full object-cover cursor-pointer"
+              onClick={openFullScreen}
+            />
+          </motion.div>
         </AnimatePresence>
 
         {/* Click to expand hint */}
         <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-all duration-300 flex items-center justify-center opacity-0 hover:opacity-100 cursor-pointer" onClick={openFullScreen}>
-          <div className="bg-black/70 text-white px-3 py-2 rounded-full text-sm">
+          <div className="bg-black/70 text-white px-2 py-1 sm:px-3 sm:py-2 rounded-full text-xs sm:text-sm">
             Click to expand
           </div>
         </div>
@@ -61,25 +70,25 @@ const ImageGallery = ({ images, title }) => {
                 e.stopPropagation();
                 prevImage();
               }}
-              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 z-10"
+              className="absolute left-1 sm:left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 sm:p-2 rounded-full transition-all duration-200 hover:scale-110 z-10"
             >
-              <ChevronLeft size={20} />
+              <ChevronLeft size={16} className="sm:w-5 sm:h-5" />
             </button>
             <button
               onClick={(e) => {
                 e.stopPropagation();
                 nextImage();
               }}
-              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200 hover:scale-110 z-10"
+              className="absolute right-1 sm:right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-1.5 sm:p-2 rounded-full transition-all duration-200 hover:scale-110 z-10"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={16} className="sm:w-5 sm:h-5" />
             </button>
           </>
         )}
 
         {/* Image Counter */}
         {images.length > 1 && (
-          <div className="absolute bottom-4 right-4 bg-black/70 text-white px-3 py-1 rounded-full text-sm">
+          <div className="absolute bottom-2 sm:bottom-4 right-2 sm:right-4 bg-black/70 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm">
             {currentIndex + 1} / {images.length}
           </div>
         )}
@@ -87,13 +96,13 @@ const ImageGallery = ({ images, title }) => {
 
       {/* Thumbnail Navigation */}
       {images.length > 1 && (
-        <div className="p-4 bg-gradient-to-r from-midnight to-navy">
-          <div className="flex gap-2 overflow-x-auto pb-3 custom-scrollbar">
+        <div className="p-3 sm:p-4 bg-gradient-to-r from-midnight to-navy">
+          <div className="flex gap-1.5 sm:gap-2 overflow-x-auto pb-2 sm:pb-3 custom-scrollbar">
             {images.map((image, index) => (
               <motion.button
                 key={index}
                 onClick={() => goToImage(index)}
-                className={`relative flex-shrink-0 w-16 h-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
+                className={`relative flex-shrink-0 w-12 h-9 sm:w-16 sm:h-12 rounded-lg overflow-hidden border-2 transition-all duration-200 ${
                   index === currentIndex
                     ? "border-blue-500 ring-2 ring-blue-500/30"
                     : "border-transparent hover:border-neutral-500"
